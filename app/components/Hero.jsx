@@ -16,7 +16,7 @@ export default function Hero() {
       <div className="absolute top-0 left-0 w-[400px] h-[400px] bg-purple-700/20 blur-[150px] rounded-full"></div>
       <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-blue-700/20 blur-[150px] rounded-full"></div>
 
-      <h1 className="text-[2.8rem] md:text-[4.2rem] font-extrabold text-center leading-tight mb-2 tracking-tight">
+      <h1 className="mt-12 text-[2.8rem] md:text-[4.2rem] font-extrabold text-center leading-tight mb-2 tracking-tight">
         Ultimate Learning Platform For <br />
         <span
           className="

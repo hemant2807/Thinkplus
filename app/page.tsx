@@ -5,6 +5,7 @@ import Stats from "./components/Stats";
 import Reviews from "./components/Reviews";
 import Faculty from "./components/Faculty";
 import Footer from "./components/Footer";
+import CTASection from "./components/CTASection";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <Stats />
       <Reviews />
       <Faculty />
+      <CTASection />
       <Footer />
     </main>
   );
