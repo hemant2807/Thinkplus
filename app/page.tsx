@@ -1,15 +1,14 @@
 import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
 
 export default function Home() {
   return (
-    <main className="min-h-screen w-full">
+    <main className="min-h-screen w-full bg-[#05010f] text-white">
       <Navbar />
 
-      <div className="pt-20"></div>
+      <div className="pt-32"></div>
 
-      <h1 className="text-center text-4xl font-bold text-blue-900">
-        ThinkPlus Home Page
-      </h1>
+      <Hero />
     </main>
   );
 }

@@ -7,30 +7,58 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="w-full shadow-md bg-white fixed top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
-        <Link href="/" className="text-2xl font-bold text-blue-900">
-          Think<span className="text-orange-500">Plus</span>
+    <nav className="fixed top-4 left-1/2 transform -translate-x-1/2 w-[92%] md:w-[85%] z-50">
+      <div
+        className="
+        backdrop-blur-xl 
+        bg-white/5 
+        border border-white/10 
+        shadow-[0_0_20px_rgba(0,0,0,0.4)] 
+        rounded-2xl 
+        px-6 py-3 
+        flex items-center justify-between
+      "
+      >
+        <Link href="/" className="text-2xl font-bold text-white tracking-wide">
+          Think<span className="text-orange-400">Plus</span>
         </Link>
 
-        <div className="hidden md:flex gap-8 text-gray-700 font-medium">
-          <Link href="/">Home</Link>
-          <Link href="/courses">Courses</Link>
-          <Link href="/about">About</Link>
-          <Link href="/contact">Contact</Link>
+        <div className="hidden md:flex gap-10 text-gray-300 font-medium">
+          <Link href="/" className="hover:text-white transition">
+            Home
+          </Link>
+          <Link href="/courses" className="hover:text-white transition">
+            Courses
+          </Link>
+          <Link href="/about" className="hover:text-white transition">
+            About
+          </Link>
+          <Link href="/contact" className="hover:text-white transition">
+            Contact
+          </Link>
         </div>
 
-        <button className="hidden md:block bg-blue-900 text-white px-5 py-2 rounded-lg hover:bg-blue-800 transition">
+        <button
+          className="
+          hidden md:block 
+          px-5 py-2 
+          bg-linear-to-r from-orange-500 to-orange-600
+          rounded-xl 
+          text-white font-semibold 
+          shadow-[0_0_10px_rgba(255,120,40,0.6)]
+          hover:shadow-[0_0_20px_rgba(255,120,40,0.9)]
+          transition
+        "
+        >
           Login
         </button>
 
-        <button className="md:hidden" onClick={() => setOpen(!open)}>
+        <button onClick={() => setOpen(!open)} className="md:hidden">
           <svg
-            className="w-7 h-7 text-blue-900"
+            className="w-8 h-8 text-white"
             fill="none"
             stroke="currentColor"
             strokeWidth="2"
-            viewBox="0 0 24 24"
           >
             {open ? (
               <path
@@ -50,16 +78,42 @@ export default function Navbar() {
       </div>
 
       {open && (
-        <div className="md:hidden bg-white shadow-md">
-          <div className="flex flex-col items-start px-6 py-4 gap-4 text-gray-700 font-medium">
-            <Link href="/">Home</Link>
-            <Link href="/courses">Courses</Link>
-            <Link href="/about">About</Link>
-            <Link href="/contact">Contact</Link>
-            <button className="bg-blue-900 text-white px-5 py-2 rounded-lg w-full text-center">
-              Login
-            </button>
-          </div>
+        <div
+          className="
+          md:hidden mt-2 
+          backdrop-blur-xl 
+          bg-white/10 
+          border border-white/10 
+          rounded-xl 
+          py-5 px-6
+          text-gray-200 
+          flex flex-col gap-4
+        "
+        >
+          <Link href="/" className="hover:text-white transition">
+            Home
+          </Link>
+          <Link href="/courses" className="hover:text-white transition">
+            Courses
+          </Link>
+          <Link href="/about" className="hover:text-white transition">
+            About
+          </Link>
+          <Link href="/contact" className="hover:text-white transition">
+            Contact
+          </Link>
+
+          <button
+            className="
+            px-5 py-2 
+            bg-linear-to-r from-orange-500 to-orange-600
+            rounded-xl 
+            text-white font-semibold 
+            shadow-[0_0_10px_rgba(255,120,40,0.6)]
+          "
+          >
+            Login
+          </button>
         </div>
       )}
     </nav>
