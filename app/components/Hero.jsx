@@ -8,7 +8,7 @@ export default function Hero() {
         w-full min-h-[95vh]
         bg-linear-to-b from-[#050114] via-[#0a0120] to-[#050114]
         text-white relative overflow-hidden
-        pt-40 pb-24 flex flex-col items-center justify-start
+        pt-24 pb-24 flex flex-col items-center justify-start
     "
     >
       <Stars />
